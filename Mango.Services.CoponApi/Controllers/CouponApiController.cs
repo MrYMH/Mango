@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Mango.Services.CoponApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Coupon")]
     [ApiController]
     public class CouponApiController : ControllerBase
     {

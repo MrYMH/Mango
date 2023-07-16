@@ -1,3 +1,7 @@
+using Mango.Web.IServices;
+using Mango.Web.Services;
+using Mango.Web.Utility;
+
 namespace Mango.Web
 {
     public class Program
@@ -9,7 +13,21 @@ namespace Mango.Web
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+
+            //configure service
+            SD.CouponAPIBase = builder.Configuration["ServiceUrls:CouponAPI"];
+            builder.Services.AddHttpContextAccessor(); //to register http client factory
+            builder.Services.AddHttpClient<ICouponService, CouponService>();
+            builder.Services.AddScoped<ICouponService, CouponService>();
+            builder.Services.AddScoped<IBaseService, BaseService>();
+
+
             var app = builder.Build();
+
+
+           
+
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

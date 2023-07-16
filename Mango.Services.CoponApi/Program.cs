@@ -42,6 +42,7 @@ namespace Mango.Services.CoponApi
 
 
             app.MapControllers();
+            ApplyMigration();
 
             app.Run();
 

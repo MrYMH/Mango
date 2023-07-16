@@ -7,7 +7,7 @@
 namespace Mango.Services.CoponApi.Migrations
 {
     /// <inheritdoc />
-    public partial class initialset : Migration
+    public partial class setinitial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

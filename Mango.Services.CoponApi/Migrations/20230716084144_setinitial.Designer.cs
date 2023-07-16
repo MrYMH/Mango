@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mango.Services.CoponApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230713095121_initialset")]
-    partial class initialset
+    [Migration("20230716084144_setinitial")]
+    partial class setinitial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
