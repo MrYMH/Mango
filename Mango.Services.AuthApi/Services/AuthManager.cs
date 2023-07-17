@@ -37,7 +37,7 @@ namespace Mango.Services.AuthApi.Services
             _roleManager = roleManager;
         }
 
-        public async Task<AuthModel> RegisterAsync(RegisterUserDto userDto)
+        public async Task<AuthModel> RegisterAsync(RegisterationRequestDto userDto)
         {
             if (await _userManager.FindByEmailAsync(userDto.Email) is not null)
             {

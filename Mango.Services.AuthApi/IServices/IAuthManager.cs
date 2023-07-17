@@ -10,7 +10,7 @@ namespace Mango.Services.AuthApi.IServices
 {
     public interface IAuthManager
     {
-        Task<AuthModel> RegisterAsync(RegisterUserDto userDto);
+        Task<AuthModel> RegisterAsync(RegisterationRequestDto userDto);
         Task<AuthModel> GetTokenAsync(LoginUserDto model);
         Task<string> AddRoleAsync(AddToRoleDto model);
     }

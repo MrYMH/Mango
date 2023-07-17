@@ -20,7 +20,7 @@ namespace Mango.Services.AuthApi.Controllers
 
         [HttpPost]
         [Route("register")]
-        public async Task<ActionResult> Register([FromBody] RegisterUserDto apiUserDto)
+        public async Task<ActionResult> Register([FromBody] RegisterationRequestDto apiUserDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
