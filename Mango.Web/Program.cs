@@ -16,9 +16,14 @@ namespace Mango.Web
 
             //configure service
             SD.CouponAPIBase = builder.Configuration["ServiceUrls:CouponAPI"];
+            SD.AuthAPIBase = builder.Configuration["ServiceUrls:AuthAPI"];
             builder.Services.AddHttpContextAccessor(); //to register http client factory
             builder.Services.AddHttpClient<ICouponService, CouponService>();
+            builder.Services.AddHttpClient<IAuthService, AuthService>();
+
+
             builder.Services.AddScoped<ICouponService, CouponService>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IBaseService, BaseService>();
 
 
