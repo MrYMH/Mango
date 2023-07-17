@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Mango.Services.AuthApi.Configuration
+namespace Mango.Services.AuthApi.Configurations
 {
 	public class RoleConfigurations : IEntityTypeConfiguration<IdentityRole>
 	{
